@@ -63,6 +63,9 @@ vectorizer = TfidfVectorizer(stop_words="english", max_df=0.7)
 X_train_vect = vectorizer.fit_transform(X_train)
 X_test_vect = vectorizer.transform(X_test)
 
+clf = MultinomialNB()
+clf.fit(X_train_vect, y_train)
+
 
 sentiment_analyser = SentimentIntensityAnalyzer()
 
