@@ -72,3 +72,12 @@ sentiment_analyser = SentimentIntensityAnalyzer()
 
 def get_polarity_score(text):
     return sentiment_analyser.polarity_scores(text)["compound"]
+
+
+def get_results(article):
+    cleaned_article = get_cleaned_text(article)
+    polarity_score = get_polarity_score(cleaned_article)
+    sentiment = "positive" if polarity_score > 0 else "negative"
+    article_vect = vectorizer.transform([cleaned_article])
+    prediction = clf.predict(article_vect)[0]
+    return {"sentiment": sentiment, "label": prediction}
