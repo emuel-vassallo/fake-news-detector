@@ -76,10 +76,21 @@ def get_polarity_score(text):
     return sentiment_analyser.polarity_scores(text)["compound"]
 
 
-def get_results(article):
+def get_analyzation_result(article):
     cleaned_article = get_cleaned_text(article)
     polarity_score = get_polarity_score(cleaned_article)
     sentiment = "positive" if polarity_score > 0 else "negative"
     article_vect = vectorizer.transform([cleaned_article])
     prediction = clf.predict(article_vect)[0]
     return {"sentiment": sentiment, "label": prediction}
+
+
+def get_text_file_content(file_path):
+    with open(file_path, "r") as file:
+        return file.read()
+
+
+# raw_user_article_text = get_text_file_content("selected_file.txt")
+#
+# result = get_analyzation_result(raw_user_article_text)
+# print(result)
