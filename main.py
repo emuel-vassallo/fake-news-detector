@@ -36,3 +36,12 @@ def get_part_of_speech_tag(token):
 
     tag = pos_tag([token])[0][1][0].upper()
     return tag_dict.get(tag, wordnet.NOUN)
+
+
+lemmatizer = WordNetLemmatizer()
+
+
+def get_lemmatized_tokens(tokens):
+    return [
+        lemmatizer.lemmatize(token, get_part_of_speech_tag(token)) for token in tokens
+    ]
