@@ -1,6 +1,6 @@
 import pandas as pd
 
-from nltk import download as nltk_download
+# from nltk import download as nltk_download
 from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
 from nltk.stem import WordNetLemmatizer
@@ -12,7 +12,9 @@ from sklearn.naive_bayes import MultinomialNB
 from sklearn.metrics import accuracy_score
 from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
 
-nltk_download("stopwords")
-nltk_download("punkt")
-nltk_download("averaged_perceptron_tagger")
-nltk_download("wordnet")
+# nltk_download("stopwords")
+# nltk_download("punkt")
+# nltk_download("averaged_perceptron_tagger")
+# nltk_download("wordnet")
+
+df = pd.read_csv("fake_or_real_news.csv")
