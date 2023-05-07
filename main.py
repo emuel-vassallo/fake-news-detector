@@ -59,6 +59,10 @@ X_train, X_test, y_train, y_test = train_test_split(
     df["cleaned_text"], df["label"], test_size=0.2, random_state=42
 )
 
+vectorizer = TfidfVectorizer(stop_words="english", max_df=0.7)
+X_train_vect = vectorizer.fit_transform(X_train)
+X_test_vect = vectorizer.transform(X_test)
+
 
 sentiment_analyser = SentimentIntensityAnalyzer()
 
