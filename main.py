@@ -20,8 +20,10 @@ from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
 df = pd.read_csv("fake_or_real_news.csv")
 
 
+stop_words = stopwords.words("english")
+
+
 def get_cleaned_tokens(text):
-    stop_words = stopwords.words("english")
     tokens = word_tokenize(text.lower())
     return [token for token in tokens if token not in stop_words]
 
