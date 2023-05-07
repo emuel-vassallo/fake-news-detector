@@ -45,3 +45,9 @@ def get_lemmatized_tokens(tokens):
     return [
         lemmatizer.lemmatize(token, get_part_of_speech_tag(token)) for token in tokens
     ]
+
+
+def get_cleaned_text(text):
+    cleaned_tokens = get_cleaned_tokens(text)
+    lemmatized_tokens = get_lemmatized_tokens(cleaned_tokens)
+    return " ".join(lemmatized_tokens)
