@@ -51,3 +51,6 @@ def get_cleaned_text(text):
     cleaned_tokens = get_cleaned_tokens(text)
     lemmatized_tokens = get_lemmatized_tokens(cleaned_tokens)
     return " ".join(lemmatized_tokens)
+
+
+df["cleaned_text"] = df["text"].apply(get_cleaned_text)
