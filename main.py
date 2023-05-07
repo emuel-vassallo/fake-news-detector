@@ -54,3 +54,7 @@ def get_cleaned_text(text):
 
 
 df["cleaned_text"] = df["text"].apply(get_cleaned_text)
+
+X_train, X_test, y_train, y_test = train_test_split(
+    df["cleaned_text"], df["label"], test_size=0.2, random_state=42
+)
