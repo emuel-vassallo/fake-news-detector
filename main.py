@@ -18,3 +18,9 @@ from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
 # nltk_download("wordnet")
 
 df = pd.read_csv("fake_or_real_news.csv")
+
+
+def get_cleaned_tokens(text):
+    stop_words = stopwords.words("english")
+    tokens = word_tokenize(text.lower())
+    return [token for token in tokens if token not in stop_words]
