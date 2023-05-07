@@ -24,3 +24,15 @@ def get_cleaned_tokens(text):
     stop_words = stopwords.words("english")
     tokens = word_tokenize(text.lower())
     return [token for token in tokens if token not in stop_words]
+
+
+def get_part_of_speech_tag(token):
+    tag_dict = {
+        "J": wordnet.ADJ,
+        "N": wordnet.NOUN,
+        "V": wordnet.VERB,
+        "R": wordnet.ADV,
+    }
+
+    tag = pos_tag([token])[0][1][0].upper()
+    return tag_dict.get(tag, wordnet.NOUN)
