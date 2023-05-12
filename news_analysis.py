@@ -1,31 +1,28 @@
+import pickle
 import pandas as pd
 
 # from nltk import download as nltk_download
 from nltk.corpus import stopwords
+from nltk.corpus import words
+from nltk.corpus import wordnet
 from nltk.tokenize import word_tokenize
 from nltk.stem import WordNetLemmatizer
-from nltk.corpus import wordnet
 from nltk import pos_tag
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.model_selection import train_test_split
 from sklearn.naive_bayes import MultinomialNB
-from sklearn.metrics import accuracy_score
 from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
 
+# nltk_download("words")
 # nltk_download("stopwords")
 # nltk_download("punkt")
 # nltk_download("averaged_perceptron_tagger")
 # nltk_download("wordnet")
 
-df = pd.read_csv("fake_or_real_news.csv")
-
-
+english_words = set(words.words())
 stop_words = stopwords.words("english")
-
-
-def get_cleaned_tokens(text):
-    tokens = word_tokenize(text.lower())
-    return [token for token in tokens if token not in stop_words]
+lemmatizer = WordNetLemmatizer()
+vectorizer = TfidfVectorizer(stop_words="english", max_df=0.7)
 
 
 def get_part_of_speech_tag(token):
@@ -40,7 +37,17 @@ def get_part_of_speech_tag(token):
     return tag_dict.get(tag, wordnet.NOUN)
 
 
-lemmatizer = WordNetLemmatizer()
+def get_tokens(text):
+    return word_tokenize(text.lower())
+
+
+def get_cleaned_tokens(text):
+    tokens = get_tokens(text)
+    return [
+        token
+        for token in tokens
+        if (token in english_words and token not in stop_words)
+    ]
 
 
 def get_lemmatized_tokens(tokens):
@@ -55,19 +62,28 @@ def get_cleaned_text(text):
     return " ".join(lemmatized_tokens)
 
 
-df["cleaned_text"] = df["text"].apply(get_cleaned_text)
+try:
+    f = open("my_classifier.pickle", "rb")
+    vectorizer, clf = pickle.load(f)
+    f.close()
+except (OSError, IOError) as e:
+    f = open("my_classifier.pickle", "wb")
 
-X_train, X_test, y_train, y_test = train_test_split(
-    df["cleaned_text"], df["label"], test_size=0.2, random_state=42
-)
+    df = pd.read_csv("fake_or_real_news.csv")
+    df["cleaned_text"] = df["text"].apply(get_cleaned_text)
 
-vectorizer = TfidfVectorizer(stop_words="english", max_df=0.7)
-X_train_vect = vectorizer.fit_transform(X_train)
-X_test_vect = vectorizer.transform(X_test)
+    X_train, X_test, y_train, y_test = train_test_split(
+        df["cleaned_text"], df["label"], test_size=0.2, random_state=42
+    )
 
-clf = MultinomialNB()
-clf.fit(X_train_vect, y_train)
+    X_train_vect = vectorizer.fit_transform(X_train)
+    X_test_vect = vectorizer.transform(X_test)
 
+    clf = MultinomialNB()
+    clf.fit(X_train_vect, y_train)
+
+    pickle.dump((vectorizer, clf), f)
+    f.close()
 
 sentiment_analyser = SentimentIntensityAnalyzer()
 
@@ -88,9 +104,3 @@ def get_analyzation_result(article):
 def get_text_file_content(file_path):
     with open(file_path, "r") as file:
         return file.read()
-
-
-# raw_user_article_text = get_text_file_content("selected_file.txt")
-#
-# result = get_analyzation_result(raw_user_article_text)
-# print(result)
