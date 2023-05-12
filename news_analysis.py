@@ -23,6 +23,7 @@ english_words = set(words.words())
 stop_words = stopwords.words("english")
 lemmatizer = WordNetLemmatizer()
 vectorizer = TfidfVectorizer(stop_words="english", max_df=0.7)
+sentiment_analyser = SentimentIntensityAnalyzer()
 
 
 def get_part_of_speech_tag(token):
@@ -62,37 +63,11 @@ def get_cleaned_text(text):
     return " ".join(lemmatized_tokens)
 
 
-try:
-    f = open("my_classifier.pickle", "rb")
-    vectorizer, clf = pickle.load(f)
-    f.close()
-except (OSError, IOError) as e:
-    f = open("my_classifier.pickle", "wb")
-
-    df = pd.read_csv("fake_or_real_news.csv")
-    df["cleaned_text"] = df["text"].apply(get_cleaned_text)
-
-    X_train, X_test, y_train, y_test = train_test_split(
-        df["cleaned_text"], df["label"], test_size=0.2, random_state=42
-    )
-
-    X_train_vect = vectorizer.fit_transform(X_train)
-    X_test_vect = vectorizer.transform(X_test)
-
-    clf = MultinomialNB()
-    clf.fit(X_train_vect, y_train)
-
-    pickle.dump((vectorizer, clf), f)
-    f.close()
-
-sentiment_analyser = SentimentIntensityAnalyzer()
-
-
 def get_polarity_score(text):
     return sentiment_analyser.polarity_scores(text)["compound"]
 
 
-def get_analyzation_result(article):
+def get_analyzation_result(clf, vectorizer, article):
     cleaned_article = get_cleaned_text(article)
     polarity_score = get_polarity_score(cleaned_article)
     sentiment = "positive" if polarity_score > 0 else "negative"
@@ -104,3 +79,39 @@ def get_analyzation_result(article):
 def get_text_file_content(file_path):
     with open(file_path, "r") as file:
         return file.read()
+
+
+def is_model_trained():
+    try:
+        open("my_classifier.pickle", "rb")
+        return True
+    except (OSError, IOError):
+        return False
+
+
+def get_trained_model():
+    try:
+        f = open("my_classifier.pickle", "rb")
+        vectorizer, clf = pickle.load(f)
+        f.close()
+        return vectorizer, clf
+    except (OSError, IOError):
+        f = open("my_classifier.pickle", "wb")
+
+        vectorizer = TfidfVectorizer(stop_words="english", max_df=0.7)
+        df = pd.read_csv("fake_or_real_news.csv")
+        df["cleaned_text"] = df["text"].apply(get_cleaned_text)
+
+        X_train, X_test, y_train, y_test = train_test_split(
+            df["cleaned_text"], df["label"], test_size=0.2, random_state=42
+        )
+
+        X_train_vect = vectorizer.fit_transform(X_train)
+
+        clf = MultinomialNB()
+        clf.fit(X_train_vect, y_train)
+
+        pickle.dump((vectorizer, clf), f)
+
+        f.close()
+        return vectorizer, clf
