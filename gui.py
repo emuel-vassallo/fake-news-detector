@@ -187,19 +187,19 @@ class MainWindow(QMainWindow):
 
         if sentiment == "negative":
             sentiment_emoji = "😞"
-            sentiment_bg_color = "#ffc6c6"
-            sentiment_text_color = "#b91414"
-            sentiment_border_color = "#b91414"
+            sentiment_bg_color = "#392029"
+            sentiment_text_color = "#EB9CA6"
+            sentiment_border_color = "#EB9CA6"
         elif sentiment == "positive":
             sentiment_emoji = "😊"
-            sentiment_bg_color = "#e4f8eD"
-            sentiment_text_color = "#24b865"
-            sentiment_border_color = "#24b865"
+            sentiment_bg_color = "#183C36"
+            sentiment_text_color = "#47FFBC"
+            sentiment_border_color = "#47FFBC"
         else:
             sentiment_emoji = "😐"
-            sentiment_bg_color = "#fff9e0"
-            sentiment_text_color = "#fea500"
-            sentiment_border_color = "#fea500"
+            sentiment_bg_color = "#343826"
+            sentiment_text_color = "#E5E566"
+            sentiment_border_color = "#E5E566"
 
         self.sentiment_result_label.setText(
             f"{sentiment_emoji} {sentiment.capitalize()}"
@@ -214,22 +214,16 @@ class MainWindow(QMainWindow):
         """
         )
 
-        self.fake_news_result_label.setText(
-            f"The article is {accuracy}% {label.lower()}"
-        )
-
         if label == "FAKE":
-            fake_news_bg_color = "#ffc6c6"
-            fake_news_text_color = "#b91414"
-            fake_news_border_color = "#b91414"
-        elif label == "REAL":
-            fake_news_bg_color = "#e4f8eD"
-            fake_news_text_color = "#24b865"
-            fake_news_border_color = "#24b865"
+            fake_news_emoji = "🚫"
+            fake_news_bg_color = "#392029"
+            fake_news_text_color = "#EB9CA6"
+            fake_news_border_color = "#EB9CA6"
         else:
-            fake_news_bg_color = ""
-            fake_news_text_color = ""
-            fake_news_border_color = ""
+            fake_news_emoji = "✅"
+            fake_news_bg_color = "#183C36"
+            fake_news_text_color = "#47FFBC"
+            fake_news_border_color = "#47FFBC"
 
         if fake_news_bg_color:
             self.fake_news_result_label.setStyleSheet(
@@ -241,3 +235,7 @@ class MainWindow(QMainWindow):
                 border-radius: 8px;
             """
             )
+            
+        self.fake_news_result_label.setText(
+            f"{fake_news_emoji} The article is {accuracy}% {label.lower()}"
+        )
