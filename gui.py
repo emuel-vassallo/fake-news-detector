@@ -186,48 +186,58 @@ class MainWindow(QMainWindow):
         save_result_in_file(raw_user_article_text, sentiment, label, accuracy)
 
         if sentiment == "negative":
-            self.sentiment_result_label.setText(f"😞 {sentiment.capitalize()}")
-            self.sentiment_result_label.setStyleSheet(
-                """
-            background-color: #ffc6c6;       
-            color: #b91414; 
-            border: 1px solid #b91414; 
-            padding: 6px;
-            border-radius: 8px;
-            """
-            )
+            sentiment_emoji = "😞"
+            sentiment_bg_color = "#ffc6c6"
+            sentiment_text_color = "#b91414"
+            sentiment_border_color = "#b91414"
         elif sentiment == "positive":
-            self.sentiment_result_label.setText(f"😊 {sentiment.capitalize()}")
-            self.sentiment_result_label.setStyleSheet(
-                """
-            background-color: #e4f8eD;       
-            color: #24b865; 
-            border: 1px solid #24b865; 
-            padding: 6px;
-            border-radius: 8px;
-            """
-            )
+            sentiment_emoji = "😊"
+            sentiment_bg_color = "#e4f8eD"
+            sentiment_text_color = "#24b865"
+            sentiment_border_color = "#24b865"
         else:
-            self.sentiment_result_label.setText(f"😐 {sentiment.capitalize()}")
-            self.sentiment_result_label.setStyleSheet(
-                """
-            background-color: #fff9e0;       
-            color: #fea500; 
-            border: 1px solid #fea500; 
+            sentiment_emoji = "😐"
+            sentiment_bg_color = "#fff9e0"
+            sentiment_text_color = "#fea500"
+            sentiment_border_color = "#fea500"
+
+        self.sentiment_result_label.setText(
+            f"{sentiment_emoji} {sentiment.capitalize()}"
+        )
+        self.sentiment_result_label.setStyleSheet(
+            f"""
+            background-color: {sentiment_bg_color};       
+            color: {sentiment_text_color}; 
+            border: 1px solid {sentiment_border_color}; 
             padding: 6px;
             border-radius: 8px;
-            """
-            )
+        """
+        )
 
         self.fake_news_result_label.setText(
             f"The article is {accuracy}% {label.lower()}"
         )
-        self.fake_news_result_label.setStyleSheet(
+
+        if label == "FAKE":
+            fake_news_bg_color = "#ffc6c6"
+            fake_news_text_color = "#b91414"
+            fake_news_border_color = "#b91414"
+        elif label == "REAL":
+            fake_news_bg_color = "#e4f8eD"
+            fake_news_text_color = "#24b865"
+            fake_news_border_color = "#24b865"
+        else:
+            fake_news_bg_color = ""
+            fake_news_text_color = ""
+            fake_news_border_color = ""
+
+        if fake_news_bg_color:
+            self.fake_news_result_label.setStyleSheet(
+                f"""
+                background-color: {fake_news_bg_color};       
+                color: {fake_news_text_color}; 
+                border: 1px solid {fake_news_border_color}; 
+                padding: 6px;
+                border-radius: 8px;
             """
-        background-color: transparent;       
-        color: #fff; 
-        border: 1px solid #fff; 
-        padding: 6px;
-        border-radius: 8px;
-        """
-        )
+            )
