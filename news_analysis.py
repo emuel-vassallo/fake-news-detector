@@ -69,11 +69,27 @@ def get_polarity_score(text):
 
 def get_analyzation_result(clf, vectorizer, article):
     cleaned_article = get_cleaned_text(article)
+
     polarity_score = get_polarity_score(cleaned_article)
-    sentiment = "positive" if polarity_score > 0 else "negative"
+    if abs(polarity_score) < 0.01:
+        sentiment = "neutral"
+    elif polarity_score > 0:
+        sentiment = "positive"
+    else:
+        sentiment = "negative"
+
     article_vect = vectorizer.transform([cleaned_article])
-    prediction = clf.predict(article_vect)[0]
-    return {"sentiment": sentiment, "label": prediction}
+    predicted_probs = clf.predict_proba(article_vect)[0]
+    predicted_label_index = predicted_probs.argmax()
+    predicted_label = clf.classes_[predicted_label_index]
+    confidence_level = predicted_probs[predicted_label_index]
+    confidence_percent = int(round(confidence_level * 100))
+
+    return {
+        "sentiment": sentiment,
+        "label": predicted_label,
+        "confidence": confidence_percent,
+    }
 
 
 def get_text_file_content(file_path):
@@ -115,3 +131,12 @@ def get_trained_model():
 
         f.close()
         return vectorizer, clf
+
+
+def save_result_in_file(article_text, article_sentiment, real_or_fake, accuracy):
+    result = f"{accuracy}% {real_or_fake}"
+    with open("output.txt", "w") as f:
+        f.write(f"Article text: {article_text}\n")
+        f.write(f"Article sentiment: {article_sentiment}\n")
+        f.write(f"Real or fake: {real_or_fake}\n")
+        f.write(f"Accuracy: {result}\n")
