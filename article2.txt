@@ -1,0 +1,164 @@
+Skip to main content
+
+WIRED
+China’s WeChat Is a Hot New Venue for US Election Misinformation
+Sign In
+
+Search
+
+    Backchannel
+    Business
+    Culture
+    Gear
+    Ideas
+    Science
+    Security
+
+    Podcasts
+    Video
+    Artificial Intelligence
+    Climate
+    Games
+    Newsletters
+    Magazine
+    Events
+    Wired Insider
+    Jobs
+    Coupons
+
+Illustration: Elena Lacey; Getty Images
+
+Jennifer Conrad
+Business
+Oct 18, 2022 8:00 AM
+China’s WeChat Is a Hot New Venue for US Election Misinformation
+Ahead of US midterms, activists are fighting falsehoods circulating in Chinese-language communities that they fear will distort the vote or suppress turnout.
+
+“I’m an engineer; I like facts: one is one, zero is zero,” says More Less, the online pseudonym of a Silicon Valley-based software engineer from China. “I think it’s my responsibility to rebut this nonsense.”
+
+More Less asked not to be identified by his real name because his posts might attract harassment. His Chinese-language fact-checking blog is part of a grassroots movement fighting political misinformation spread by US users of Chinese-language social media, such as Weibo and WeChat. His recent posts have taken on claims that California Democrats made it legal to shoplift up to $950 in goods or that widespread voter fraud distorted the 2020 presidential election.
+
+With the US midterm elections just weeks away, More Less and other activists tracking misinformation in Chinese American communities worry that posts stoking racial tensions or casting doubt on the integrity of elections could sway close races—or cause people to abstain from voting.
+
+Messaging app WeChat is seen as one of the main venues for Chinese-language misinformation in the US. The version offered in China, known as Weixin, is hugely influential and used for far more than chatting, with functions including hailing taxis and storing Covid vaccination codes. The US version has limited capabilities and a lower profile, aside from being the target of an attempted ban by then president Donald Trump in 2020. But WeChat is used by millions of Chinese Americans and people with friends, family, or business in China, including as a political organizing tool. In 2022, WeChat groups played a role in the recall of members of San Francisco’s school board, and New York City officials’ decision to pause plans to scrap testing requirements for some public high schools.
+
+Featured Video
+
+ 
+
+A recent visit to a Chinese-language WeChat group for New Yorkers by WIRED revealed a parade of dubious health advice and earwax cures, and posts describing violence against Asians across the US. Popular posts, generally from individuals or small outlets with names that translate to things like “Overseas Chinese Web,” often pull from English-language news reports, layering on an urgent and sensational style.
+
+Within China, Weixin is subject to Chinese government censorship, and WeChat’s US acceptable use policy forbids misinformation and inappropriate content, and bans ads or sponsored content on political issues. But people tracking misinformation say that the platform is largely unmoderated in the US. WeChat’s parent company, Tencent, declined to respond to questions about misinformation spreading among US users.
+
+“We only get the garbage. Nobody is cleaning it up,” says Jin Xia Niu, Chinese digital engagement program manager at nonprofit Chinese for Affirmative Action. In June, the San Francisco organization launched a Chinese-language fact-checking initiative called PiYaoBa, which posts articles to its website and public WeChat accounts that are written in a similar style to fact-checking organizations such as Snopes and FactCheck.org.
+
+Whether sites like those are significantly slowing misinformation is debatable, but Niu and others working on Chinese-language content face distinct challenges. Many WeChat posts appear on private channels, which can have up to 500 members, and even public channels, which anyone can view, are hard to track because posts are not crawled by Google or indexed by social media monitoring services like Meta-owned CrowdTangle.
+
+When Chinese-language misinformation appears on US platforms like YouTube or Facebook, activists say it seems to get less actively moderated than English content, a pattern that has also been documented for other communities in the US that use languages other than English, particularly Spanish. Although Meta and Twitter have both announced efforts to label misleading information in other languages, reports by whistleblowers and in the media suggest, moderation falls short in languages other than English. Elena Hernandez, a spokesperson for YouTube, says the platform’s moderation teams include people with Mandarin and Cantonese expertise. Meta did not respond to a request for comment; Twitter did not comment.
+
+Individuals like More Less, and small grassroots groups, aim to fill in the gaps but have limited resources. More established nonprofits bring heft but often promote liberal causes and can be seen as partisan and biased. Unlike for those working against misinformation distributed in English, there isn’t a ready supply of reporting from trustworthy news sites, fact-checking pages, or government publications to point people to. Non-English publications in the US, which often serve specific ethnic groups, generally don’t have the staff to cover politics in depth.
+
+Misleading political posts in Chinese come from a variety of sources and include viewpoints from the left and right—although researchers report a sharp rise in far-right content since 2020. Well-funded media outlets affiliated with the US far right, such as the GTV Media Group and Epoch Media Group, produce original but hyperpartisan content in Chinese. Other accounts that share misinformation appear to be aimed at monetizing clicks by translating the kind of extreme content that also goes viral in English.
+See What’s Next in Tech With the Fast Forward Newsletter
+A weekly dispatch from the future by Will Knight, exploring AI advances and other technology set to change our lives. Delivered every Thursday.
+Your email
+By signing up you agree to our User Agreement (including the class action waiver and arbitration provisions), our Privacy Policy & Cookie Statement and to receive marketing and account-related emails from WIRED. You can unsubscribe at any time.
+
+On YouTube, self-styled newscasters have become a core news source for some Chinese speakers in the US, offering political hot takes that often slide into misinformation, says Jenny L., who helps track disinformation and misinformation for Asian Americans Advancing Justice - AAJC, a nonprofit in Washington, DC. She asked that her last name be withheld to avoid online harassment. “It’s pretty easy for them to skirt the minimal moderation YouTube has in place for non-English content,” she says, including by avoiding certain words or using slang terms—for instance a word that sounds like the second character in the Mandarin word for vaccine.
+
+None of the activists WIRED spoke to saw evidence of Chinese government involvement in spreading election misinformation—although the blogger More Less pointed out that some nationalists in China welcome anything that weakens US democracy.
+
+Much like in English, Donald Trump currently dominates much of the US conversation on Chinese-language platforms about politics and the upcoming midterm elections. At a media briefing in September, CAA, the Mental Health Association for Chinese Communities, and APIAVote, a group that tries to involve Asian American and Pacific Islander communities in the political process, warned about trending falsehoods.
+
+They included a story circulating on public WeChat channels that claimed the FBI raid to retrieve government documents from Trump’s home in Florida was orchestrated by the Biden administration to help Democrats in the midterms. Some posts had a uniquely Chinese take, comparing the FBI search to unauthorized raids on homes during China’s Cultural Revolution. In response, PiYaoBa published an article in Chinese offering detailed context, corrections to the false information, and links to reliable sources, albeit all in English.
+
+People trying to fight Chinese-language misinformation describe a generation gap in internet use by first- and second-generation immigrants. Chinese-speakers who moved to the US as adults are more likely to rely on Chinese platforms such as WeChat to get their news and can be less familiar with the political and education system, making them less able to see through misinformation.
+
+Grace Xu, a volunteer with No Melon, a Chinese-language fact-checking group, says that in recent years many misleading posts have preyed on the fears of first-generation immigrants—including concerns over candidates whose policies sound too much like communism—or have aimed to pit Asian Americans against other minorities. “They’re optimizing toward emotions,” she says, which can make reasoned rebuttals ineffective. Some Chinese Americans feel that US politicians have not done enough to address the jump in violence against Asian Americans that began during the pandemic. That sense of being overlooked fosters distrust that can help misinformation spread.
+Image may contain: Crowd, Audience, Human, Person, and Speech
+The WIRED Guide to Online Conspiracy Theories
+Everything you need to know about George Soros, Pizzagate, and the Berenstain Bears.
+
+By Emma Grey Ellis
+
+Activists trying to clean up Chinese-language digital spaces are turning to technology to sift through the flood of questionable content and monitor the effectiveness of their interventions. CAA, for example, uses a service called Critical Mention to watch for English-language misinformation that might spill over into Chinese.
+
+The group is also working with Meedan, a nonprofit that develops digital tools to help fight misinformation. Meedan recently received funding from the US National Science Foundation to develop tools powered by machine learning to help Asian American and Pacific Islander communities look for phrases and topics associated with misinformation across different languages and platforms.
+
+Asian Americans Advancing Justice - AAJC uses a collaborative social media monitoring tool, called Junkipedia, that pulls data about accounts and terms that have been flagged as problematic. Approved organizations can use that information to write and annotate reports—contributing to a Wikipedia-style database of misleading content.
+
+As the midterm elections near, CAA’s Niu says she is seeing more misinformation, spreading on more platforms, than in previous election cycles. “I’m extremely worried,” she says, but she also sees reason for hope. “I do feel we’re making some progress. We know who the key players are, and we’re more prepared.”
+
+Updated 18-10-2022, 2:05 pm EDT: This story was updated to include the full name of the nonprofit Asian Americans Advancing Justice - AAJC.
+Get More From WIRED
+
+    📩 Don’t miss our biggest stories, delivered to your inbox every day
+
+    🎧 Our new podcast wants you to Have a Nice Future
+
+    Reality TV saved me
+
+    How to delete your data from ChatGPT
+
+    Chinese VCs lived the Silicon Valley high life—party’s over
+
+    A new cloned horse offers hope for endangered species
+
+    Running sucks. Kettlebells are the answer
+
+    🔊 Our Gear team sounds off on audiophile-grade speakers, vinyl accessories and the best wireless headphones for anyone
+
+Jennifer Conrad is a writer in Brooklyn. She has written for Vogue, SupChina, and Newsweek.com. She recently received an MA from Johns Hopkins School of Advanced International Studies.
+Staff Writer
+
+Topics
+content moderation
+fake news
+Social Media
+elections
+Facebook
+censorship
+More from WIRED
+In Russia, Western Planes Are Falling Apart
+After months of sanctions that have made critical repair parts difficult to access, aircraft operators are running out of options. 
+
+Chris Stokel-Walker
+Chinese VCs Lived the High Life. Now the Party’s Over
+Before the US cracked down on China’s tech sector, the country’s investors chased deals in California with Maseratis and Michelin-starred food.
+
+Tracy Wen Liu
+OpenAI’s CEO Says the Age of Giant AI Models Is Already Over
+Sam Altman says the research strategy that birthed ChatGPT is played out and future strides in artificial intelligence will require new ideas.
+
+Will Knight
+How ChatGPT and Other LLMs Work—and Where They Could Go Next
+Large language models like AI chatbots seem to be everywhere. If you understand them better, you can use them better.
+
+David Nield
+An Anti-Trans Doctor Group Leaked 10,000 Confidential Files
+A Google Drive left public on the American College of Pediatricians’ website exposed detailed financial records, sensitive member details, and more.
+
+Dell Cameron
+The Hacking of ChatGPT Is Just Getting Started
+Security researchers are jailbreaking large language models to get around safety rules. Things could get much worse.
+
+Matt Burgess
+Twitter Rival Bluesky Has a Nudes Problem
+In its chaotic early days, the platform’s algorithm shared naked pictures in its What’s Hot feed.
+
+Chris Stokel-Walker
+Tesla’s Magnet Mystery Shows Elon Musk Is Willing to Compromise
+The EV maker said it will expunge rare earths from its vehicles' motors, suggesting Tesla engineers will have to get creative.
+
+Gregory Barber
+WIRED
+WIRED is where tomorrow is realized. It is the essential source of information and ideas that make sense of a world in constant transformation. The WIRED conversation illuminates how technology is changing every aspect of our lives—from culture to business, science to design. The breakthroughs and innovations that we uncover lead to new ways of thinking, new connections, and new industries.
+
+    RSS
+    Accessibility Help
+    Condé Nast Store
+    Condé Nast Spotlight
+
+© 2023 Condé Nast. All rights reserved. Use of this site constitutes acceptance of our User Agreement and Privacy Policy and Cookie Statement and Your California Privacy Rights. WIRED may earn a portion of sales from products that are purchased through our site as part of our Affiliate Partnerships with retailers. The material on this site may not be reproduced, distributed, transmitted, cached or otherwise used, except with the prior written permission of Condé Nast. Ad Choices
+Select international site
+
